@@ -76,4 +76,8 @@ class Card {
 	static func !=(left: Card, right: Card) -> Bool {
 		return left == right
 	}
+	
+	func Print() -> String {
+		return String("\(m_value) of \(m_suit)")
+	}
 }

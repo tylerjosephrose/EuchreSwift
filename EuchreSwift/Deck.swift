@@ -64,7 +64,7 @@ class Deck {
 	
 	func PrintDeck() {
 		for cards in m_cards {
-			print("\(cards.ValueToString()) of \(cards.SuitToString())\n")
+			print("\(cards.Print())")
 		}
 	}
 	
