@@ -16,13 +16,8 @@ enum Suit: Int {
 	case Hearts = 1, Spades = 2, Diamonds = 3, Clubs = 4, High = 5, Low = 6
 }
 
-enum Owner {
-	case Player_1
-	case Player_2
-	case Player_3
-	case Player_4
-	case MainDeck
-	case InPlay
+enum Owner: Int {
+	case Player_1 = 0, Player_2 = 1, Player_3 = 2, Player_4 = 3, MainDeck = 4, InPlay = 5
 }
 
 class Card {

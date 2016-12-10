@@ -9,7 +9,7 @@
 import Foundation
 
 class Player {
-	private var m_hand = [Card]()
+	var m_hand = [Card]()
 	private var m_whoami: Owner
 	
 	let myAI: AI
