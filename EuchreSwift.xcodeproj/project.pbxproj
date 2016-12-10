@@ -10,6 +10,7 @@
 		9A6F622D1DFC409B0020F6D8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F622C1DFC409B0020F6D8 /* Card.swift */; };
 		9A6F622F1DFC42F00020F6D8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F622E1DFC42F00020F6D8 /* Player.swift */; };
 		9A6F62311DFC44B00020F6D8 /* Trick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F62301DFC44B00020F6D8 /* Trick.swift */; };
+		9A6F62331DFC551C0020F6D8 /* AI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F62321DFC551C0020F6D8 /* AI.swift */; };
 		9ADA010B1DFBBF260052B70D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA010A1DFBBF260052B70D /* AppDelegate.swift */; };
 		9ADA010D1DFBBF260052B70D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA010C1DFBBF260052B70D /* ViewController.swift */; };
 		9ADA01101DFBBF260052B70D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ADA010E1DFBBF260052B70D /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		9A6F622C1DFC409B0020F6D8 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		9A6F622E1DFC42F00020F6D8 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		9A6F62301DFC44B00020F6D8 /* Trick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trick.swift; sourceTree = "<group>"; };
+		9A6F62321DFC551C0020F6D8 /* AI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AI.swift; sourceTree = "<group>"; };
 		9ADA01071DFBBF260052B70D /* EuchreSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuchreSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ADA010A1DFBBF260052B70D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ADA010C1DFBBF260052B70D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				9A6F622C1DFC409B0020F6D8 /* Card.swift */,
 				9ADA01221DFBC9100052B70D /* Deck.swift */,
 				9A6F622E1DFC42F00020F6D8 /* Player.swift */,
+				9A6F62321DFC551C0020F6D8 /* AI.swift */,
 				9A6F62301DFC44B00020F6D8 /* Trick.swift */,
 			);
 			name = Model;
@@ -169,6 +172,7 @@
 				9A6F62311DFC44B00020F6D8 /* Trick.swift in Sources */,
 				9ADA010D1DFBBF260052B70D /* ViewController.swift in Sources */,
 				9A6F622D1DFC409B0020F6D8 /* Card.swift in Sources */,
+				9A6F62331DFC551C0020F6D8 /* AI.swift in Sources */,
 				9A6F622F1DFC42F00020F6D8 /* Player.swift in Sources */,
 				9ADA010B1DFBBF260052B70D /* AppDelegate.swift in Sources */,
 			);
