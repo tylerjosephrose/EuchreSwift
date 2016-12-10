@@ -63,8 +63,9 @@ class Deck {
 	}
 	
 	func PrintDeck() {
+		TextToPrint = "\n"
 		for cards in m_cards {
-			print("\(cards.Print())")
+			TextToPrint! += ("\(cards.Print())\n")
 		}
 	}
 	
@@ -78,5 +79,11 @@ class Deck {
 		}
 		// Because of the statement above, this should never return nil
 			return m_deckInstance!
+	}
+	
+	var TextToPrint: String?
+	
+	func PrintTest() -> String{
+		return TextToPrint!
 	}
 }
