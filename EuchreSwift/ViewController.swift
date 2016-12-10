@@ -12,8 +12,10 @@ class ViewController: UIViewController {
 	
 	private var test = Card(value: Value.Nine, ofSuit: Suit.Hearts)
 	
+
 	@IBAction func Main() {
-		print(test.ValueToString())
+		let deck = Deck()
+		deck.PrintDeck()
 	}
 
 	override func viewDidLoad() {

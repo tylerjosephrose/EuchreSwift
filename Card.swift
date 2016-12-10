@@ -8,22 +8,12 @@
 
 import Foundation
 
-enum Value {
-	case Nine
-	case Ten
-	case Jack
-	case Queen
-	case King
-	case Ace
+enum Value: Int {
+	case Nine = 9, Ten = 10, Jack = 11, Queen = 12, King = 13, Ace = 14
 }
 
-enum Suit {
-	case Hearts
-	case Diamonds
-	case Spades
-	case Clubs
-	case High
-	case Low
+enum Suit: Int {
+	case Hearts = 1, Spades = 2, Diamonds = 3, Clubs = 4, High = 5, Low = 6
 }
 
 enum Owner {
