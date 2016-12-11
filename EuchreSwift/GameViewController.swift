@@ -20,14 +20,21 @@ class GameViewController: UIViewController {
 	
 	@IBAction func CardSelected(_ sender: CardButton) {
 		// Card was selected. Let model know and get out of UI
-		let point = CGPoint(x: Int(sender.frame.origin.x), y: Int(sender.frame.origin.y) - 20)
+		//UIView.animate(withDuration: 0.2, animations: {sender.transform = CGAffineTransform(scaleX: 1/1.1, y: 1/1.1)})
+		/*let point = CGPoint(x: Int(sender.frame.origin.x), y: Int(sender.frame.origin.y) - 20)
 		let size = CGSize(width: sender.frame.size.width * 1.3, height: sender.frame.size.height * 1.3)
-		//UIView.animate(withDuration: 0.2, animations: {sender.frame = CGRect(origin: point, size: size)})
+		UIView.animate(withDuration: 0.2, animations: {sender.frame = CGRect(origin: point, size: size)})*/
 		print("The \(sender.GetCard().Print()) was selected")
 		sender.isHidden = true
 	}
 	
+	@IBAction func HoldingCard(_ sender: CardButton) {
+		UIView.animate(withDuration: 0.2, animations: {sender.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)})
+	}
 	
+	@IBAction func ReleasedCard(_ sender: CardButton) {
+		UIView.animate(withDuration: 0.2, animations: {sender.transform = CGAffineTransform(scaleX: 1, y: 1)})
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()

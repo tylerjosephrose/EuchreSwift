@@ -142,6 +142,8 @@
                                                         <state key="normal" image="jack_of_hearts2"/>
                                                         <connections>
                                                             <action selector="CardSelected:" destination="qof-zW-qc9" eventType="touchUpInside" id="UN4-Kg-ZcK"/>
+                                                            <action selector="HoldingCard:" destination="qof-zW-qc9" eventType="touchDown" id="zfe-cx-l6n"/>
+                                                            <action selector="ReleasedCard:" destination="qof-zW-qc9" eventType="touchDragExit" id="SMH-Mr-TkE"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLb-if-upQ" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
@@ -151,6 +153,8 @@
                                                         <state key="normal" image="jack_of_diamonds2"/>
                                                         <connections>
                                                             <action selector="CardSelected:" destination="qof-zW-qc9" eventType="touchUpInside" id="Ogy-AY-nHH"/>
+                                                            <action selector="HoldingCard:" destination="qof-zW-qc9" eventType="touchDown" id="pNN-qT-qiY"/>
+                                                            <action selector="ReleasedCard:" destination="qof-zW-qc9" eventType="touchDragExit" id="fUM-tm-Hos"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgc-3h-XOa" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
@@ -160,6 +164,8 @@
                                                         <state key="normal" image="ace_of_hearts"/>
                                                         <connections>
                                                             <action selector="CardSelected:" destination="qof-zW-qc9" eventType="touchUpInside" id="DBH-8g-IDy"/>
+                                                            <action selector="HoldingCard:" destination="qof-zW-qc9" eventType="touchDown" id="J34-01-wjo"/>
+                                                            <action selector="ReleasedCard:" destination="qof-zW-qc9" eventType="touchDragExit" id="2jS-1D-jZf"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29S-bu-S1A" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
@@ -169,6 +175,8 @@
                                                         <state key="normal" image="king_of_hearts2"/>
                                                         <connections>
                                                             <action selector="CardSelected:" destination="qof-zW-qc9" eventType="touchUpInside" id="cH8-K8-ldM"/>
+                                                            <action selector="HoldingCard:" destination="qof-zW-qc9" eventType="touchDown" id="v9X-Nt-zJ5"/>
+                                                            <action selector="ReleasedCard:" destination="qof-zW-qc9" eventType="touchDragExit" id="tdM-mo-EeL"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAq-39-2DQ" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
@@ -178,6 +186,8 @@
                                                         <state key="normal" image="queen_of_hearts2"/>
                                                         <connections>
                                                             <action selector="CardSelected:" destination="qof-zW-qc9" eventType="touchUpInside" id="LBa-vB-Tf5"/>
+                                                            <action selector="HoldingCard:" destination="qof-zW-qc9" eventType="touchDown" id="WNw-iL-pNG"/>
+                                                            <action selector="ReleasedCard:" destination="qof-zW-qc9" eventType="touchDragExit" id="C6p-8s-aWJ"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="no6-SJ-Lu1" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
@@ -187,6 +197,8 @@
                                                         <state key="normal" title="Button" image="10_of_hearts"/>
                                                         <connections>
                                                             <action selector="CardSelected:" destination="qof-zW-qc9" eventType="touchUpInside" id="08b-ZY-aYr"/>
+                                                            <action selector="HoldingCard:" destination="qof-zW-qc9" eventType="touchDown" id="zn3-ge-bJF"/>
+                                                            <action selector="ReleasedCard:" destination="qof-zW-qc9" eventType="touchDragExit" id="Vw2-xP-eGK"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
