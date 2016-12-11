@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -64,16 +66,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72A-1b-VN8">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool-table-felt-texture-and-snooker" translatesAutoresizingMaskIntoConstraints="NO" id="6ab-YK-oZp"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="72A-1b-VN8" firstAttribute="bottom" secondItem="7Ox-NG-Rnf" secondAttribute="top" id="0zb-1z-LWQ"/>
-                            <constraint firstItem="72A-1b-VN8" firstAttribute="top" secondItem="nJv-Ci-aaw" secondAttribute="top" id="6l2-H4-SIq"/>
-                            <constraint firstAttribute="trailing" secondItem="72A-1b-VN8" secondAttribute="trailing" id="nnP-Gk-nSb"/>
-                            <constraint firstItem="72A-1b-VN8" firstAttribute="leading" secondItem="nJv-Ci-aaw" secondAttribute="leading" id="tOM-lf-Ln8"/>
+                            <constraint firstAttribute="trailing" secondItem="6ab-YK-oZp" secondAttribute="trailing" id="16m-n6-bfH"/>
+                            <constraint firstItem="6ab-YK-oZp" firstAttribute="top" secondItem="VPk-oz-iQJ" secondAttribute="bottom" id="ERb-qu-BEb"/>
+                            <constraint firstItem="7Ox-NG-Rnf" firstAttribute="top" secondItem="6ab-YK-oZp" secondAttribute="bottom" id="VSY-t7-9YX"/>
+                            <constraint firstItem="6ab-YK-oZp" firstAttribute="leading" secondItem="nJv-Ci-aaw" secondAttribute="leading" id="Yex-lQ-aiX"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -93,16 +93,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oS8-l4-w5N">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool-table-felt-texture-and-snooker" translatesAutoresizingMaskIntoConstraints="NO" id="ZJr-Yg-v3g"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oS8-l4-w5N" firstAttribute="bottom" secondItem="Ppi-QQ-5wY" secondAttribute="top" id="0Ye-Pb-Ujf"/>
-                            <constraint firstItem="oS8-l4-w5N" firstAttribute="top" secondItem="c1y-cD-tKN" secondAttribute="top" id="CaM-Nw-DBr"/>
-                            <constraint firstItem="oS8-l4-w5N" firstAttribute="leading" secondItem="c1y-cD-tKN" secondAttribute="leading" id="TNm-Qh-vqx"/>
-                            <constraint firstAttribute="trailing" secondItem="oS8-l4-w5N" secondAttribute="trailing" id="vw7-zy-QWC"/>
+                            <constraint firstItem="Ppi-QQ-5wY" firstAttribute="top" secondItem="ZJr-Yg-v3g" secondAttribute="bottom" id="CSA-gM-mzJ"/>
+                            <constraint firstAttribute="trailing" secondItem="ZJr-Yg-v3g" secondAttribute="trailing" id="Eag-3x-uQb"/>
+                            <constraint firstItem="ZJr-Yg-v3g" firstAttribute="top" secondItem="1ly-rv-o6U" secondAttribute="bottom" id="TdV-en-4uJ"/>
+                            <constraint firstItem="ZJr-Yg-v3g" firstAttribute="leading" secondItem="c1y-cD-tKN" secondAttribute="leading" id="w10-Xe-SHI"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -122,18 +120,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Nb-km-qcV">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool-table-felt-texture-and-snooker" translatesAutoresizingMaskIntoConstraints="NO" id="bOk-sZ-4Yf"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aD1-NS-waR">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Gj-zh-Irc"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3L-3q-3Pz"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCI-kt-XI5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="zZT-j3-2BL">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsd-K9-Vak">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xux-GE-YQg">
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9W-9C-H3g" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="z9W-9C-H3g" secondAttribute="height" multiplier="500:726" id="ORC-IQ-0DG"/>
+                                                        </constraints>
+                                                        <state key="normal" image="jack_of_hearts2"/>
+                                                        <connections>
+                                                            <action selector="CardSelected:" destination="qof-zW-qc9" eventType="touchUpInside" id="UN4-Kg-ZcK"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLb-if-upQ" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="FLb-if-upQ" secondAttribute="height" multiplier="500:726" id="Dqj-RL-4sp"/>
+                                                        </constraints>
+                                                        <state key="normal" image="jack_of_diamonds2"/>
+                                                        <connections>
+                                                            <action selector="CardSelected:" destination="qof-zW-qc9" eventType="touchUpInside" id="Ogy-AY-nHH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgc-3h-XOa" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="fgc-3h-XOa" secondAttribute="height" multiplier="500:726" id="mO6-BM-qnE"/>
+                                                        </constraints>
+                                                        <state key="normal" image="ace_of_hearts"/>
+                                                        <connections>
+                                                            <action selector="CardSelected:" destination="qof-zW-qc9" eventType="touchUpInside" id="DBH-8g-IDy"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29S-bu-S1A" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="29S-bu-S1A" secondAttribute="height" multiplier="500:726" id="wzf-XI-bXj"/>
+                                                        </constraints>
+                                                        <state key="normal" image="king_of_hearts2"/>
+                                                        <connections>
+                                                            <action selector="CardSelected:" destination="qof-zW-qc9" eventType="touchUpInside" id="cH8-K8-ldM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAq-39-2DQ" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="BAq-39-2DQ" secondAttribute="height" multiplier="500:726" id="lwq-Za-OpI"/>
+                                                        </constraints>
+                                                        <state key="normal" image="queen_of_hearts2"/>
+                                                        <connections>
+                                                            <action selector="CardSelected:" destination="qof-zW-qc9" eventType="touchUpInside" id="LBa-vB-Tf5"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="no6-SJ-Lu1" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="no6-SJ-Lu1" secondAttribute="height" multiplier="500:726" id="T5A-LL-5c6"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button" image="10_of_hearts"/>
+                                                        <connections>
+                                                            <action selector="CardSelected:" destination="qof-zW-qc9" eventType="touchUpInside" id="08b-ZY-aYr"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6M-Nk-laI">
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0Nb-km-qcV" firstAttribute="leading" secondItem="2io-p0-tDH" secondAttribute="leading" id="Ine-fW-Ted"/>
-                            <constraint firstItem="0Nb-km-qcV" firstAttribute="top" secondItem="2io-p0-tDH" secondAttribute="top" id="UZb-A6-BVW"/>
-                            <constraint firstAttribute="trailing" secondItem="0Nb-km-qcV" secondAttribute="trailing" id="p6Y-jH-fVG"/>
-                            <constraint firstItem="0Nb-km-qcV" firstAttribute="bottom" secondItem="Mls-F9-83Z" secondAttribute="top" id="tfK-JD-fce"/>
+                            <constraint firstItem="bOk-sZ-4Yf" firstAttribute="leading" secondItem="2io-p0-tDH" secondAttribute="leading" id="LGU-kv-H1A"/>
+                            <constraint firstItem="Mls-F9-83Z" firstAttribute="top" secondItem="bOk-sZ-4Yf" secondAttribute="bottom" id="Rgz-4s-PXk"/>
+                            <constraint firstAttribute="trailing" secondItem="bOk-sZ-4Yf" secondAttribute="trailing" id="Rvy-fX-Ogq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aD1-NS-waR" secondAttribute="trailing" id="aME-Oe-DpC"/>
+                            <constraint firstItem="bOk-sZ-4Yf" firstAttribute="top" secondItem="o7u-aB-eiR" secondAttribute="bottom" id="gX0-w2-kOR"/>
+                            <constraint firstItem="Mls-F9-83Z" firstAttribute="top" secondItem="aD1-NS-waR" secondAttribute="bottom" id="gal-8N-PXD"/>
+                            <constraint firstItem="aD1-NS-waR" firstAttribute="leading" secondItem="2io-p0-tDH" secondAttribute="leadingMargin" id="hUw-zA-IGd"/>
+                            <constraint firstItem="aD1-NS-waR" firstAttribute="top" secondItem="o7u-aB-eiR" secondAttribute="bottom" id="pmF-3h-cth"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Card1Var" destination="z9W-9C-H3g" id="8uh-TV-jyO"/>
+                        <outlet property="Card2Var" destination="FLb-if-upQ" id="Lao-73-5Y6"/>
+                        <outlet property="Card3Var" destination="fgc-3h-XOa" id="h8F-Qv-Vrq"/>
+                        <outlet property="Card4Var" destination="29S-bu-S1A" id="SSp-ki-htO"/>
+                        <outlet property="Card5Var" destination="BAq-39-2DQ" id="rq4-GD-pY0"/>
+                        <outlet property="Card6Var" destination="no6-SJ-Lu1" id="DB8-TQ-shH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJT-3z-6ua" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,16 +238,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="taq-ed-vw4">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool-table-felt-texture-and-snooker" translatesAutoresizingMaskIntoConstraints="NO" id="CPC-QN-8GE"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="taq-ed-vw4" secondAttribute="trailing" id="eqk-I7-STD"/>
-                            <constraint firstItem="taq-ed-vw4" firstAttribute="top" secondItem="WxD-hr-G2t" secondAttribute="top" id="glr-rs-WTW"/>
-                            <constraint firstItem="taq-ed-vw4" firstAttribute="leading" secondItem="WxD-hr-G2t" secondAttribute="leading" id="nv2-l7-Der"/>
-                            <constraint firstItem="taq-ed-vw4" firstAttribute="bottom" secondItem="dfA-Kj-lmK" secondAttribute="top" id="vMF-QB-eXy"/>
+                            <constraint firstItem="CPC-QN-8GE" firstAttribute="leading" secondItem="WxD-hr-G2t" secondAttribute="leading" id="0YR-xT-r7n"/>
+                            <constraint firstItem="CPC-QN-8GE" firstAttribute="top" secondItem="vD2-lT-G75" secondAttribute="bottom" id="8eT-cD-JAD"/>
+                            <constraint firstAttribute="trailing" secondItem="CPC-QN-8GE" secondAttribute="trailing" id="Jbc-VU-11D"/>
+                            <constraint firstItem="dfA-Kj-lmK" firstAttribute="top" secondItem="CPC-QN-8GE" secondAttribute="bottom" id="y3A-lB-O3v"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -169,4 +254,13 @@
             <point key="canvasLocation" x="969.26536731634189" y="976.79999999999995"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="10_of_hearts" width="500" height="726"/>
+        <image name="ace_of_hearts" width="500" height="726"/>
+        <image name="jack_of_diamonds2" width="500" height="726"/>
+        <image name="jack_of_hearts2" width="500" height="726"/>
+        <image name="king_of_hearts2" width="500" height="726"/>
+        <image name="pool-table-felt-texture-and-snooker" width="2272" height="1704"/>
+        <image name="queen_of_hearts2" width="500" height="726"/>
+    </resources>
 </document>
