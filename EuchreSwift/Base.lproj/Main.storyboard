@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C63a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C63a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qof-zW-qc9">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -50,7 +50,123 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.610194902548727" y="117.59999999999999"/>
+            <point key="canvasLocation" x="-483" y="-596"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="ATk-1V-6qJ">
+            <objects>
+                <viewController id="aAg-Im-Wa2" customClass="MainViewController" customModule="EuchreSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VPk-oz-iQJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Ox-NG-Rnf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nJv-Ci-aaw">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72A-1b-VN8">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="72A-1b-VN8" firstAttribute="bottom" secondItem="7Ox-NG-Rnf" secondAttribute="top" id="0zb-1z-LWQ"/>
+                            <constraint firstItem="72A-1b-VN8" firstAttribute="top" secondItem="nJv-Ci-aaw" secondAttribute="top" id="6l2-H4-SIq"/>
+                            <constraint firstAttribute="trailing" secondItem="72A-1b-VN8" secondAttribute="trailing" id="nnP-Gk-nSb"/>
+                            <constraint firstItem="72A-1b-VN8" firstAttribute="leading" secondItem="nJv-Ci-aaw" secondAttribute="leading" id="tOM-lf-Ln8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y1w-w7-cqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="130"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="pNn-JO-37V">
+            <objects>
+                <viewController id="bZW-X5-kaa" customClass="SettingsViewController" customModule="EuchreSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1ly-rv-o6U"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ppi-QQ-5wY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c1y-cD-tKN">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oS8-l4-w5N">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oS8-l4-w5N" firstAttribute="bottom" secondItem="Ppi-QQ-5wY" secondAttribute="top" id="0Ye-Pb-Ujf"/>
+                            <constraint firstItem="oS8-l4-w5N" firstAttribute="top" secondItem="c1y-cD-tKN" secondAttribute="top" id="CaM-Nw-DBr"/>
+                            <constraint firstItem="oS8-l4-w5N" firstAttribute="leading" secondItem="c1y-cD-tKN" secondAttribute="leading" id="TNm-Qh-vqx"/>
+                            <constraint firstAttribute="trailing" secondItem="oS8-l4-w5N" secondAttribute="trailing" id="vw7-zy-QWC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lob-uz-4Mc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188.45577211394306" y="978.39999999999998"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="gc5-MA-AfA">
+            <objects>
+                <viewController id="qof-zW-qc9" customClass="GameViewController" customModule="EuchreSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o7u-aB-eiR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mls-F9-83Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2io-p0-tDH">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Nb-km-qcV">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Nb-km-qcV" firstAttribute="leading" secondItem="2io-p0-tDH" secondAttribute="leading" id="Ine-fW-Ted"/>
+                            <constraint firstItem="0Nb-km-qcV" firstAttribute="top" secondItem="2io-p0-tDH" secondAttribute="top" id="UZb-A6-BVW"/>
+                            <constraint firstAttribute="trailing" secondItem="0Nb-km-qcV" secondAttribute="trailing" id="p6Y-jH-fVG"/>
+                            <constraint firstItem="0Nb-km-qcV" firstAttribute="bottom" secondItem="Mls-F9-83Z" secondAttribute="top" id="tfK-JD-fce"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kJT-3z-6ua" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970.16491754122944" y="130.40000000000001"/>
+        </scene>
+        <!--Rules View Controller-->
+        <scene sceneID="DTh-1V-Eje">
+            <objects>
+                <viewController id="i9b-F9-sns" customClass="RulesViewController" customModule="EuchreSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vD2-lT-G75"/>
+                        <viewControllerLayoutGuide type="bottom" id="dfA-Kj-lmK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WxD-hr-G2t">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="taq-ed-vw4">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="taq-ed-vw4" secondAttribute="trailing" id="eqk-I7-STD"/>
+                            <constraint firstItem="taq-ed-vw4" firstAttribute="top" secondItem="WxD-hr-G2t" secondAttribute="top" id="glr-rs-WTW"/>
+                            <constraint firstItem="taq-ed-vw4" firstAttribute="leading" secondItem="WxD-hr-G2t" secondAttribute="leading" id="nv2-l7-Der"/>
+                            <constraint firstItem="taq-ed-vw4" firstAttribute="bottom" secondItem="dfA-Kj-lmK" secondAttribute="top" id="vMF-QB-eXy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="noJ-dx-uc1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969.26536731634189" y="976.79999999999995"/>
         </scene>
     </scenes>
 </document>
