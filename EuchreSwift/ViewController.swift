@@ -23,11 +23,11 @@ class ViewController: UIViewController {
 	func Main() {
 		let deck = Deck()
 		deck.PrintDeck()
-		let print = deck.PrintTest()
-		PrintToView(print: print)
-		//print("Pick a number 1 to 10")
-		//let choice = readLine()
-		//print("You chose \(choice)")
+		let trick = Trick()
+		trick.SetTrump(trump: .Hearts)
+		print("Tyler: \(trick.GetTrump())")
+		let print1 = deck.PrintTest()
+		PrintToView(print: print1)
 	}
 	
 	@IBOutlet weak var PrintToUI: UITextView!

@@ -227,22 +227,164 @@ class Round {
 	}
 
 	func PlayTrick(Players: inout [Player]) {
-		
+		let lead = m_currentTrick.GetLeadPlayer().rawValue
+		for i in 0...4 {
+			let playerUp = (lead + i) % 4
+			var good = 1
+			if playerUp != 0 {
+				Players[playerUp].myAI.AIPlayCard(trick: m_currentTrick, player: Players[playerUp])
+			}
+			else {
+				while good != 0 {
+					good = AskPlayCard(trick: m_currentTrick, player: Players[playerUp])
+				}
+			}
+		}
 	}
 	
-	func SetScore(team1Tricks: Int, team2Tricks: Int, Points: inout [Int]) {
+	private func PlayTrickLone(Players: inout [Player]) {
+		let lead = m_currentTrick.GetLeadPlayer().rawValue
 		
+		for i in 0...4 {
+			let playerUp = (lead + i) % 4
+			if playerUp == (m_playerBid! + 2) % 4 {
+				continue
+			}
+			var good = 1
+			print("This is \(Players[playerUp].WhoAmI())")
+			if playerUp != 0 {
+				Players[playerUp].myAI.AIPlayCard(trick: m_currentTrick, player: Players[playerUp])
+			}
+			else {
+				while good == 1 {
+					good = AskPlayCard(trick: m_currentTrick, player: Players[playerUp])
+				}
+			}
+		}
 	}
 	
-	private func AskPlay(trick: Trick, player: Player) -> Int {
+	private func AskPlayCard(trick: Trick, player: Player) -> Int {
+		print("Trump is \(trick.GetTrump())")
+		print("The cards played so far are:")
+		trick.PrintTrick()
+		print("Pick what card number you want to play")
+		player.PrintHand()
+		let choice = 1
+		// Get choice from UI
+		let result = player.PlayCard(choice: choice, trick: m_currentTrick)
+		if result == 1 {
+			print("Did not follow Lead Suit of \(trick.GetLeadSuit())")
+			return 1
+		}
+		else if result == 2 {
+			print("Picked a card not in your hand")
+			return 2
+		}
 		return 0
 	}
 	
 	private func SetUpShoot(Players: inout [Player]) {
+		let givingPlayer = (m_playerBid! + 2) % 4
+		var tempCard: Card?
+		if givingPlayer != 0 {
+			tempCard = Players[givingPlayer].myAI.AIPassCard(trick: m_currentTrick, player: Players[givingPlayer])
+		}
+		else {
+			print("Your teammate is shooting it in \(m_currentTrick.GetTrump())")
+			print("What card will you give them?")
+			Players[0].PrintHand()
+			let choice = 1
+			// Get choice from UI
+			tempCard = Players[0].GiveCard(choice: choice)
+		}
 		
+		// This part is for recieving the card
+		if m_playerBid != 0 {
+			Players[m_playerBid!].myAI.AITakeCard(trick: m_currentTrick, player: Players[m_playerBid!], card: tempCard!)
+		}
+		else {
+			print("Player 1, your teammate is giving you the \(tempCard?.Print())")
+			print("What card will you discard for it?")
+			Players[0].PrintHand()
+			let choice = 1
+			// Get choice from UI
+			Players[0].TakeCard(card: tempCard!, choice: choice)
+			Players[0].SortHand(trump: m_currentTrick.GetTrump())
+		}
+		
+		// Return the other Players hand to the deck
+		if givingPlayer == 0 {
+			for _ in 0...5 {
+				let temp = Players[(m_playerBid! + 2) % 4].GiveCard(choice: 1)
+				Deck.GetInstance().Return(card: temp)
+			}
+		}
 	}
 	
-	private func PlayTrickLone(Players: inout [Player]) {
+	func SetScore(team1Tricks: Int, team2Tricks: Int, Points: inout [Int]) {
+		// Loner
+		if m_bidAmount == 8 {
+			if(m_teamBid == 1 && team1Tricks < 6) {
+				Points[0] = -12
+				Points[1] = team2Tricks
+				return
+			}
+			else if m_teamBid == 2 && team2Tricks < 6 {
+				Points[0] = team1Tricks
+				Points[1] = -12
+				return
+			}
+			else if m_teamBid == 1 {
+				Points[0] = 12
+				return
+			}
+			else {
+				Points[1] = 12
+				return
+			}
+		}
 		
+		// shoot
+		if m_bidAmount == 7 {
+			if(m_teamBid == 1 && team1Tricks < 6) {
+				Points[0] = -8
+				Points[1] = team2Tricks
+				return
+			}
+			else if m_teamBid == 2 && team2Tricks < 6 {
+				Points[0] = team1Tricks
+				Points[1] = -8
+				return
+			}
+			else if m_teamBid == 1 {
+				Points[0] = 8
+				return
+			}
+			else {
+				Points[1] = 8
+				return
+			}
+		}
+		
+		// team1 fails bid
+		if m_teamBid == 1 && m_bidAmount! > team1Tricks {
+			Points[0] = m_bidAmount! * -1
+			Points[1] = team2Tricks
+			return
+		}
+		
+		// team 2 fails bid
+		else if m_teamBid == 2 && m_bidAmount! > team2Tricks {
+			Points[0] = team1Tricks
+			Points[1] = m_bidAmount! * -1
+			return
+		}
+		
+		// either team completes the bid
+		else {
+			Points[0] = team1Tricks
+			Points[1] = team2Tricks
+			return
+		}
 	}
 }
