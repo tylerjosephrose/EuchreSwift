@@ -17,6 +17,7 @@ struct GameSettings {
 class Game {
 	var m_teamOneScore: Int?
 	var m_teamTwoScore: Int?
+	var winningScore = 32
 	var numOfRounds = 0
 	var Points = [0, 0]
 	private static var m_gameInstance: Game?

@@ -59,8 +59,7 @@ class GameViewController: UIViewController {
 		// Pick the player to lead
 		let lead = (arc4random() % 4) + 1
 		
-		let WinningScore = 32
-		if game.m_teamOneScore! > WinningScore || game.m_teamTwoScore! > WinningScore {
+		if game.m_teamOneScore! > game.winningScore || game.m_teamTwoScore! > game.winningScore {
 			game.FinalizeGame()
 		}
 		game.numOfRounds += 1
