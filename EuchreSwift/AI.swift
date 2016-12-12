@@ -58,7 +58,7 @@ class AI {
 		if trick.GetLeadPlayer() == player.WhoAmI() && (player.m_hand.count == 6 || trick.GetBidder() != player.WhoAmI()) {
 			// Hold on to one card in case player is leading with all trump but no right bar
 			let tempCard = playableCards[0]
-			for i in 0...playableCards.count {
+			for i in 0...playableCards.count - 1 {
 				if playableCards[i] == rightBar {
 					return playableCards[i]
 				}
@@ -189,7 +189,7 @@ class AI {
 	
 	func BidScoring(trick: Trick, player: Player) {
 		// Score the hand on each suit
-		for i in 1...5 {
+		for i in 1...4 {
 			var score = 0
 			let right = Suit(rawValue: i)!
 			let left = Trick.GetLeft(suit: right)

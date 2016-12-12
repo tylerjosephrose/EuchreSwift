@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C63a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qof-zW-qc9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C63a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aAg-Im-Wa2">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -67,13 +67,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool-table-felt-texture-and-snooker" translatesAutoresizingMaskIntoConstraints="NO" id="6ab-YK-oZp"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Sal-zt-YMA">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkQ-Uy-1FF">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="euchre" translatesAutoresizingMaskIntoConstraints="NO" id="EgL-E7-876">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="EgL-E7-876" secondAttribute="height" multiplier="332:152" id="sfd-yP-xhg"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2O-vQ-ptq">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="g2O-vQ-ptq" secondAttribute="height" multiplier="60:19" id="4Wg-PT-lj3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Play Game">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="qof-zW-qc9" kind="presentation" id="4OT-UP-TGY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaM-rT-DG2">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="AaM-rT-DG2" secondAttribute="height" multiplier="37:17" id="DHK-Rd-tPf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="bZW-X5-kaa" kind="presentation" id="WTv-XN-8hZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coS-uH-HQi">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="coS-uH-HQi" secondAttribute="height" multiplier="13:9" id="nqW-oc-o1H"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Rules">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="i9b-F9-sns" kind="presentation" id="tcn-bU-qBW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="6ab-YK-oZp" secondAttribute="trailing" id="16m-n6-bfH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Sal-zt-YMA" secondAttribute="trailing" id="30o-DW-7fz"/>
+                            <constraint firstItem="7Ox-NG-Rnf" firstAttribute="top" secondItem="Sal-zt-YMA" secondAttribute="bottom" id="Czv-1Z-UZ8"/>
                             <constraint firstItem="6ab-YK-oZp" firstAttribute="top" secondItem="VPk-oz-iQJ" secondAttribute="bottom" id="ERb-qu-BEb"/>
                             <constraint firstItem="7Ox-NG-Rnf" firstAttribute="top" secondItem="6ab-YK-oZp" secondAttribute="bottom" id="VSY-t7-9YX"/>
                             <constraint firstItem="6ab-YK-oZp" firstAttribute="leading" secondItem="nJv-Ci-aaw" secondAttribute="leading" id="Yex-lQ-aiX"/>
+                            <constraint firstItem="Sal-zt-YMA" firstAttribute="top" secondItem="VPk-oz-iQJ" secondAttribute="bottom" id="bq8-nE-XNW"/>
+                            <constraint firstItem="Sal-zt-YMA" firstAttribute="leading" secondItem="nJv-Ci-aaw" secondAttribute="leadingMargin" id="lEh-O4-2uG"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -94,6 +148,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool-table-felt-texture-and-snooker" translatesAutoresizingMaskIntoConstraints="NO" id="ZJr-Yg-v3g"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D59-Ff-1Bq">
+                                <frame key="frameInset" width="86" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" red="0.0017752185229999999" green="0.46264594790000002" blue="0.99926763770000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.34110915489999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aAg-Im-Wa2" kind="presentation" id="C58-wx-hEj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -212,6 +279,19 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cva-GC-e6N">
+                                <frame key="frameInset" width="86" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" red="0.0017752185229999999" green="0.46264594790000002" blue="0.99926763770000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.34110915489999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aAg-Im-Wa2" kind="presentation" id="PsS-U2-xL9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -251,6 +331,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool-table-felt-texture-and-snooker" translatesAutoresizingMaskIntoConstraints="NO" id="CPC-QN-8GE"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1T-98-r9Z">
+                                <frame key="frameInset" width="86" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" red="0.0017752185229999999" green="0.46264594790000002" blue="0.99926763770000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.34110915489999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aAg-Im-Wa2" kind="presentation" id="XPF-Hh-Awf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -269,10 +362,14 @@
     <resources>
         <image name="10_of_hearts" width="500" height="726"/>
         <image name="ace_of_hearts" width="500" height="726"/>
+        <image name="euchre" width="332" height="152"/>
         <image name="jack_of_diamonds2" width="500" height="726"/>
         <image name="jack_of_hearts2" width="500" height="726"/>
         <image name="king_of_hearts2" width="500" height="726"/>
         <image name="pool-table-felt-texture-and-snooker" width="2272" height="1704"/>
         <image name="queen_of_hearts2" width="500" height="726"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="C58-wx-hEj"/>
+    </inferredMetricsTieBreakers>
 </document>

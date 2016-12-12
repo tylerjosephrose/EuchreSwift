@@ -88,7 +88,7 @@ class Player {
 	func GetHand() {
 		// Get 6 cards from the deck to my hand for the round
 		let deck = Deck.GetInstance()
-		for _ in 0...6 {
+		for _ in 0...5 {
 			let tempCard = deck.DrawCard()
 			tempCard.SetOwner(owner: m_whoami)
 			m_hand.append(tempCard)
@@ -120,7 +120,7 @@ class Player {
 			var swapped = false
 			repeat {
 				swapped = false
-				for i in 0...5 {
+				for i in 0...4 {
 					if Player.CompareCardsTrump(c1: m_hand[i + 1], c2: m_hand[i], trump: trump) {
 						let tempCard = m_hand[i]
 						m_hand[i] = m_hand[i + 1]

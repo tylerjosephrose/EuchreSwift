@@ -35,7 +35,7 @@ class Round {
 			SetUpShoot(Players: &Players)
 		}
 		if m_bidAmount! > 6 {
-			for _ in 0...6 {
+			for _ in 0...5 {
 				if m_currentTrick.GetWinner() != .InPlay {
 					m_currentTrick.SetLeadPlayer(owner: m_currentTrick.GetWinner())
 				}
@@ -52,7 +52,7 @@ class Round {
 			}
 		}
 		else {
-			for _ in 0...6 {
+			for _ in 0...5 {
 				if m_currentTrick.GetWinner() != .InPlay {
 					m_currentTrick.SetLeadPlayer(owner: m_currentTrick.GetWinner())
 				}
@@ -77,7 +77,7 @@ class Round {
 		var playerUp = 0
 		var player = (lead - 1) % 4
 		
-		for i in 0...4 {
+		for i in 0...3 {
 			playerUp = (lead + i) % 4
 			var j = 1
 			if playerUp != 0 {
@@ -228,7 +228,7 @@ class Round {
 
 	func PlayTrick(Players: inout [Player]) {
 		let lead = m_currentTrick.GetLeadPlayer().rawValue
-		for i in 0...4 {
+		for i in 0...3 {
 			let playerUp = (lead + i) % 4
 			var good = 1
 			if playerUp != 0 {
@@ -245,7 +245,7 @@ class Round {
 	private func PlayTrickLone(Players: inout [Player]) {
 		let lead = m_currentTrick.GetLeadPlayer().rawValue
 		
-		for i in 0...4 {
+		for i in 0...3 {
 			let playerUp = (lead + i) % 4
 			if playerUp == (m_playerBid! + 2) % 4 {
 				continue
@@ -314,7 +314,7 @@ class Round {
 		
 		// Return the other Players hand to the deck
 		if givingPlayer == 0 {
-			for _ in 0...5 {
+			for _ in 0...4 {
 				let temp = Players[(m_playerBid! + 2) % 4].GiveCard(choice: 1)
 				Deck.GetInstance().Return(card: temp)
 			}
