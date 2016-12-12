@@ -15,8 +15,19 @@ struct GameSettings {
 }
 
 class Game {
-	private var m_teamOneScore: Int?
-	private var m_teamTwoScore: Int?
+	var m_teamOneScore: Int?
+	var m_teamTwoScore: Int?
+	var numOfRounds = 0
+	var Points = [0, 0]
+	private static var m_gameInstance: Game?
+	
+	static func GetInstance() -> Game {
+		if m_gameInstance == nil {
+			m_gameInstance = Game()
+		}
+		// Because of the statement above, this should never return nil
+		return m_gameInstance!
+	}
 	
 	func PlayGame() {
 		GameSettings.AllowHigh = true
@@ -43,9 +54,8 @@ class Game {
 			Deck.GetInstance().Shuffle()
 			print("Round \(numOfRounds)")
 			let round = Round(LeadPlayer: Owner(rawValue: Int(lead))!)
-			var Points = [0, 0]
-			round.PlayRound(Players: &Players, Points: &Points)
-			SetScore(Points: &Points)
+			round.PlayRound(Players: &Players)
+			SetScore()
 			PrintScore()
 		}
 		if m_teamOneScore! > m_teamTwoScore! {
@@ -61,8 +71,19 @@ class Game {
 		print("Team 2: \(m_teamTwoScore)")
 	}
 	
-	func SetScore(Points: inout [Int]) {
+	func SetScore() {
 		m_teamOneScore! += Points[0]
 		m_teamTwoScore! += Points[1]
+	}
+	
+	func FinalizeGame() {
+		PrintScore()
+		
+		if m_teamOneScore! > m_teamTwoScore! {
+			print("Team 1 won")
+		}
+		else {
+			print("Team 2 won")
+		}
 	}
 }

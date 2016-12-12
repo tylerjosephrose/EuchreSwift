@@ -9,7 +9,7 @@
 import Foundation
 
 class AI {
-	private var m_bidScoring: Dictionary<Suit, Int>?
+	private var m_bidScoring: Dictionary<Suit, Int> = [:]
 	private var m_bestSuit: Suit?
 	
 	func DeterminePlayableCards(trick: Trick, player: Player, playableCards: inout [Card]) {
@@ -139,7 +139,8 @@ class AI {
 	func AIBid(trick: Trick, player: Player, currentBid: inout Int) {
 		// Bidding for the AI will work by scoring the hand based on each suit. A given score will result in the bid amount and the suit picked 
 		// or no pick
-		m_bidScoring?.removeAll()
+		m_bidScoring.removeAll()
+		BidScoring(trick: trick, player: player)
 		
 		// Is this the last player with no curret bid?
 		var forceBid = false
@@ -148,9 +149,9 @@ class AI {
 		}
 		
 		var highest = 0
-		assert((m_bidScoring?.count)! < 6 && (m_bidScoring?.count)! > 0, "bidScoring should not have more than 6 choices")
+		assert((m_bidScoring.count) < 6 && (m_bidScoring.count) > 0, "bidScoring should not have more than 6 choices")
 		
-		for (suit,value) in m_bidScoring! {
+		for (suit,value) in m_bidScoring {
 			if value > highest {
 				highest = value
 				m_bestSuit = suit
@@ -234,7 +235,7 @@ class AI {
 					continue
 				}
 			}
-			m_bidScoring![right] = score
+			m_bidScoring[right] = score
 		}
 		
 		// Score the hand on high
@@ -273,7 +274,7 @@ class AI {
 					}
 				}
 			}
-			m_bidScoring?[.High] = score
+			m_bidScoring[.High] = score
 		}
 		// Score the hand on low
 		if GameSettings.AllowLow {

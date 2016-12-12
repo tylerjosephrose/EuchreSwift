@@ -20,7 +20,7 @@ class Round {
 		m_teamBid = 0
 	}
 	
-	func PlayRound(Players: inout [Player], Points: inout [Int]) {
+	func PlayRound(Players: inout [Player]) {
 		Players[0].GetHand()
 		Players[1].GetHand()
 		Players[2].GetHand()
@@ -68,7 +68,7 @@ class Round {
 				}
 			}
 		}
-		SetScore(team1Tricks: Team1Tricks, team2Tricks: Team2Tricks, Points: &Points)
+		SetScore(team1Tricks: Team1Tricks, team2Tricks: Team2Tricks)
 	}
 	
 	func GetBids(Players: inout [Player]) {
@@ -321,25 +321,25 @@ class Round {
 		}
 	}
 	
-	func SetScore(team1Tricks: Int, team2Tricks: Int, Points: inout [Int]) {
+	func SetScore(team1Tricks: Int, team2Tricks: Int) {
 		// Loner
 		if m_bidAmount == 8 {
 			if(m_teamBid == 1 && team1Tricks < 6) {
-				Points[0] = -12
-				Points[1] = team2Tricks
+				Game.GetInstance().Points[0] = -12
+				Game.GetInstance().Points[1] = team2Tricks
 				return
 			}
 			else if m_teamBid == 2 && team2Tricks < 6 {
-				Points[0] = team1Tricks
-				Points[1] = -12
+				Game.GetInstance().Points[0] = team1Tricks
+				Game.GetInstance().Points[1] = -12
 				return
 			}
 			else if m_teamBid == 1 {
-				Points[0] = 12
+				Game.GetInstance().Points[0] = 12
 				return
 			}
 			else {
-				Points[1] = 12
+				Game.GetInstance().Points[1] = 12
 				return
 			}
 		}
@@ -347,43 +347,43 @@ class Round {
 		// shoot
 		if m_bidAmount == 7 {
 			if(m_teamBid == 1 && team1Tricks < 6) {
-				Points[0] = -8
-				Points[1] = team2Tricks
+				Game.GetInstance().Points[0] = -8
+				Game.GetInstance().Points[1] = team2Tricks
 				return
 			}
 			else if m_teamBid == 2 && team2Tricks < 6 {
-				Points[0] = team1Tricks
-				Points[1] = -8
+				Game.GetInstance().Points[0] = team1Tricks
+				Game.GetInstance().Points[1] = -8
 				return
 			}
 			else if m_teamBid == 1 {
-				Points[0] = 8
+				Game.GetInstance().Points[0] = 8
 				return
 			}
 			else {
-				Points[1] = 8
+				Game.GetInstance().Points[1] = 8
 				return
 			}
 		}
 		
 		// team1 fails bid
 		if m_teamBid == 1 && m_bidAmount! > team1Tricks {
-			Points[0] = m_bidAmount! * -1
-			Points[1] = team2Tricks
+			Game.GetInstance().Points[0] = m_bidAmount! * -1
+			Game.GetInstance().Points[1] = team2Tricks
 			return
 		}
 		
 		// team 2 fails bid
 		else if m_teamBid == 2 && m_bidAmount! > team2Tricks {
-			Points[0] = team1Tricks
-			Points[1] = m_bidAmount! * -1
+			Game.GetInstance().Points[0] = team1Tricks
+			Game.GetInstance().Points[1] = m_bidAmount! * -1
 			return
 		}
 		
 		// either team completes the bid
 		else {
-			Points[0] = team1Tricks
-			Points[1] = team2Tricks
+			Game.GetInstance().Points[0] = team1Tricks
+			Game.GetInstance().Points[1] = team2Tricks
 			return
 		}
 	}

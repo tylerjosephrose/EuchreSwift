@@ -36,17 +36,46 @@ class GameViewController: UIViewController {
 		UIView.animate(withDuration: 0.2, animations: {sender.transform = CGAffineTransform(scaleX: 1, y: 1)})
 	}
 	
+	
+	
+	func StartGame() {
+		Deck.GetInstance().Shuffle()
+		
+		let game = Game()
+		GameSettings.AllowHigh = true
+		GameSettings.AllowLow = false
+		GameSettings.ScrewTheDealer = true
+		
+		let Player1 = Player(player: .Player_1)
+		let Player2 = Player(player: .Player_2)
+		let Player3 = Player(player: .Player_3)
+		let Player4 = Player(player: .Player_4)
+		
+		var Players = [Player1, Player2, Player3, Player4]
+		
+		game.m_teamOneScore = 0
+		game.m_teamTwoScore = 0
+		
+		// Pick the player to lead
+		let lead = (arc4random() % 4) + 1
+		
+		let WinningScore = 32
+		if game.m_teamOneScore! > WinningScore || game.m_teamTwoScore! > WinningScore {
+			game.FinalizeGame()
+		}
+		game.numOfRounds += 1
+		Deck.GetInstance().Shuffle()
+		print("Round \(game.numOfRounds)")
+		let round = Round(LeadPlayer: Owner(rawValue: Int(lead))!)
+		round.PlayRound(Players: &Players)
+		game.SetScore()
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
-		// Temporary stuff for testing
-		Buttons = [Card1Var, Card2Var, Card3Var, Card4Var, Card5Var, Card6Var]
-		print("\(Buttons!.count) Buttons")
-		Deck.GetInstance().Shuffle()
-		for i in 0...5 {
-			print("Making button number \(i)")
-			Buttons?[i].SetUp(card: Deck.GetInstance().DrawCard())
-		}
+		StartGame()
+
 	}
 	
 	override func didReceiveMemoryWarning() {
