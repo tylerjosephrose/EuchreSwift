@@ -1,5 +1,5 @@
 //
-//  Round.swift
+//  RoundController.swift
 //  EuchreSwift
 //
 //  Created by Tyler Rose on 12/10/16.
@@ -20,12 +20,14 @@ class Round {
 		m_teamBid = 0
 	}
 	
-	func PlayRound(Players: inout [Player]) {
+	func StartRound(Players: inout [Player]) {
 		Players[0].GetHand()
 		Players[1].GetHand()
 		Players[2].GetHand()
 		Players[3].GetHand()
-		
+	}
+	
+	func PlayRound(Players: inout [Player]) {
 		GetBids(Players: &Players)
 		
 		var Team1Tricks = 0

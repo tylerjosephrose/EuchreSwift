@@ -1,5 +1,5 @@
 //
-//  Player.swift
+//  PlayerController.swift
 //  EuchreSwift
 //
 //  Created by Tyler Rose on 12/10/16.

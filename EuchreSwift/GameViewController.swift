@@ -37,7 +37,7 @@ class GameViewController: UIViewController {
 	}
 	
 	
-	
+	// Start controls for the game
 	func StartGame() {
 		Deck.GetInstance().Shuffle()
 		
@@ -67,7 +67,7 @@ class GameViewController: UIViewController {
 		Deck.GetInstance().Shuffle()
 		print("Round \(game.numOfRounds)")
 		let round = Round(LeadPlayer: Owner(rawValue: Int(lead))!)
-		round.PlayRound(Players: &Players)
+		round.StartRound(Players: &Players)
 		game.SetScore()
 	}
 	
