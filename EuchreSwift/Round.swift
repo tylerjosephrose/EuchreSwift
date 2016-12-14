@@ -7,13 +7,14 @@
 //
 
 import Foundation
-
+import UIKit
+/*
 class Round {
-	private var m_teamBid: Int
-	private var m_bidAmount: Int?
-	private var m_currentBid: Int?
-	private var m_playerBid: Int?
-	private var m_currentTrick = Trick()
+	var m_teamBid: Int
+	var m_bidAmount: Int?
+	var m_currentBid: Int?
+	var m_playerBid: Int?
+	var m_currentTrick = Trick()
 	
 	init(LeadPlayer: Owner) {
 		m_currentTrick.SetLeadPlayer(owner: LeadPlayer)
@@ -25,6 +26,7 @@ class Round {
 		Players[1].GetHand()
 		Players[2].GetHand()
 		Players[3].GetHand()
+		GetBids(Players: &Players)
 	}
 	
 	func PlayRound(Players: inout [Player]) {
@@ -95,6 +97,7 @@ class Round {
 				j = 0
 			}
 			while j == 1 {
+				/*
 				// Print current bid info
 				if m_currentBid == 2 {
 					print("There is no current bid")
@@ -151,7 +154,31 @@ class Round {
 				else if Int(propose)! < m_currentBid! {
 					print("You did not bid high enough")
 					j = 1
-				}
+				}*/
+				
+				let bidView = UIAlertController(title: "How much would you like to bid?", message: "The current bid is: \(m_currentBid) by Player \(player + 1)", preferredStyle: UIAlertControllerStyle.alert)
+				
+				
+				bidView.addAction(UIAlertAction(title: "0", style: .default, handler: { (action: UIAlertAction!) in
+					// Do action of button here
+				}))
+				bidView.addAction(UIAlertAction(title: "3", style: .default, handler: { (action: UIAlertAction!) in
+					// Do action of button here
+				}))
+				bidView.addAction(UIAlertAction(title: "4", style: .default, handler: { (action: UIAlertAction!) in
+					// Do action of button here
+				}))
+				bidView.addAction(UIAlertAction(title: "5", style: .default, handler: { (action: UIAlertAction!) in
+					// Do action of button here
+				}))
+				bidView.addAction(UIAlertAction(title: "Shoot", style: .default, handler: { (action: UIAlertAction!) in
+					// Do action of button here
+				}))
+				bidView.addAction(UIAlertAction(title: "Alone", style: .default, handler: { (action: UIAlertAction!) in
+					// Do action of button here
+				}))
+				let gvc = GameViewController()
+				gvc.present(bidView, animated: true, completion: nil)
 			}
 		}
 		m_playerBid = player
@@ -389,4 +416,4 @@ class Round {
 			return
 		}
 	}
-}
+}*/

@@ -29,7 +29,7 @@ class Game {
 		// Because of the statement above, this should never return nil
 		return m_gameInstance!
 	}
-	
+	/*
 	func PlayGame() {
 		GameSettings.AllowHigh = true
 		GameSettings.AllowLow = false
@@ -65,7 +65,7 @@ class Game {
 		else {
 			print("Team 2 won")
 		}
-	}
+	}*/
 	
 	func PrintScore() {
 		print("Team 1: \(m_teamOneScore)")

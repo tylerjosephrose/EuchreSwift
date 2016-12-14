@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16C63a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aAg-Im-Wa2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C63a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aAg-Im-Wa2">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,20 +23,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool-table-felt-texture-and-snooker" translatesAutoresizingMaskIntoConstraints="NO" id="6ab-YK-oZp"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool-table-felt-texture-and-snooker" translatesAutoresizingMaskIntoConstraints="NO" id="6ab-YK-oZp">
+                                <rect key="frame" x="0.0" y="20" width="667" height="355"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Sal-zt-YMA">
+                                <rect key="frame" x="20" y="20" width="627" height="355"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkQ-Uy-1FF">
+                                        <rect key="frame" x="0.0" y="0.0" width="627" height="158.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="euchre" translatesAutoresizingMaskIntoConstraints="NO" id="EgL-E7-876">
+                                        <rect key="frame" x="198" y="162.5" width="231" height="106"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="EgL-E7-876" secondAttribute="height" multiplier="332:152" id="sfd-yP-xhg"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2O-vQ-ptq">
+                                        <rect key="frame" x="267.5" y="272.5" width="92" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="g2O-vQ-ptq" secondAttribute="height" multiplier="60:19" id="4Wg-PT-lj3"/>
                                         </constraints>
@@ -46,6 +55,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AaM-rT-DG2">
+                                        <rect key="frame" x="286" y="305.5" width="55" height="25.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="AaM-rT-DG2" secondAttribute="height" multiplier="37:17" id="DHK-Rd-tPf"/>
                                         </constraints>
@@ -58,6 +68,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coS-uH-HQi">
+                                        <rect key="frame" x="299" y="335" width="29" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="coS-uH-HQi" secondAttribute="height" multiplier="13:9" id="nqW-oc-o1H"/>
                                         </constraints>
@@ -101,9 +112,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool-table-felt-texture-and-snooker" translatesAutoresizingMaskIntoConstraints="NO" id="ZJr-Yg-v3g"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool-table-felt-texture-and-snooker" translatesAutoresizingMaskIntoConstraints="NO" id="ZJr-Yg-v3g">
+                                <rect key="frame" x="0.0" y="20" width="667" height="355"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D59-Ff-1Bq">
-                                <frame key="frameInset" width="86" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="86" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
@@ -141,22 +154,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool-table-felt-texture-and-snooker" translatesAutoresizingMaskIntoConstraints="NO" id="bOk-sZ-4Yf"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool-table-felt-texture-and-snooker" translatesAutoresizingMaskIntoConstraints="NO" id="bOk-sZ-4Yf">
+                                <rect key="frame" x="0.0" y="20" width="667" height="355"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aD1-NS-waR">
+                                <rect key="frame" x="20" y="20" width="627" height="355"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Gj-zh-Irc"/>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3L-3q-3Pz"/>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCI-kt-XI5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Gj-zh-Irc">
+                                        <rect key="frame" x="0.0" y="0.0" width="627" height="89"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3L-3q-3Pz">
+                                        <rect key="frame" x="0.0" y="89" width="627" height="88.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xd-S7-iva">
+                                                <rect key="frame" x="0.0" y="0.0" width="627" height="88.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="Start Game">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="StartGameButton:" destination="qof-zW-qc9" eventType="touchUpInside" id="b0A-4L-O0O"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCI-kt-XI5">
+                                        <rect key="frame" x="0.0" y="177.5" width="627" height="89"/>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="zZT-j3-2BL">
+                                        <rect key="frame" x="0.0" y="266.5" width="627" height="88.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsd-K9-Vak">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="88.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="xux-GE-YQg">
+                                                <rect key="frame" x="120" y="0.0" width="387" height="88.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9W-9C-H3g" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="61" height="88.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="z9W-9C-H3g" secondAttribute="height" multiplier="500:726" id="ORC-IQ-0DG"/>
                                                         </constraints>
@@ -168,6 +206,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLb-if-upQ" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
+                                                        <rect key="frame" x="65" y="0.0" width="61.5" height="88.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="FLb-if-upQ" secondAttribute="height" multiplier="500:726" id="Dqj-RL-4sp"/>
                                                         </constraints>
@@ -179,6 +218,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgc-3h-XOa" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
+                                                        <rect key="frame" x="130.5" y="0.0" width="61" height="88.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="fgc-3h-XOa" secondAttribute="height" multiplier="500:726" id="mO6-BM-qnE"/>
                                                         </constraints>
@@ -190,6 +230,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29S-bu-S1A" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
+                                                        <rect key="frame" x="195.5" y="0.0" width="61" height="88.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="29S-bu-S1A" secondAttribute="height" multiplier="500:726" id="wzf-XI-bXj"/>
                                                         </constraints>
@@ -201,6 +242,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAq-39-2DQ" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
+                                                        <rect key="frame" x="260.5" y="0.0" width="61.5" height="88.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="BAq-39-2DQ" secondAttribute="height" multiplier="500:726" id="lwq-Za-OpI"/>
                                                         </constraints>
@@ -212,6 +254,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="no6-SJ-Lu1" customClass="CardButton" customModule="EuchreSwift" customModuleProvider="target">
+                                                        <rect key="frame" x="326" y="0.0" width="61" height="88.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="no6-SJ-Lu1" secondAttribute="height" multiplier="500:726" id="T5A-LL-5c6"/>
                                                         </constraints>
@@ -225,6 +268,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6M-Nk-laI">
+                                                <rect key="frame" x="507" y="0.0" width="120" height="88.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -234,7 +278,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cva-GC-e6N">
-                                <frame key="frameInset" width="86" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="86" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
@@ -266,6 +310,7 @@
                         <outlet property="Card4Var" destination="29S-bu-S1A" id="SSp-ki-htO"/>
                         <outlet property="Card5Var" destination="BAq-39-2DQ" id="rq4-GD-pY0"/>
                         <outlet property="Card6Var" destination="no6-SJ-Lu1" id="DB8-TQ-shH"/>
+                        <outlet property="StartGameButtonVar" destination="4xd-S7-iva" id="kdR-KT-bOP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJT-3z-6ua" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -284,9 +329,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool-table-felt-texture-and-snooker" translatesAutoresizingMaskIntoConstraints="NO" id="CPC-QN-8GE"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool-table-felt-texture-and-snooker" translatesAutoresizingMaskIntoConstraints="NO" id="CPC-QN-8GE">
+                                <rect key="frame" x="0.0" y="20" width="667" height="355"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1T-98-r9Z">
-                                <frame key="frameInset" width="86" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="86" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <size key="titleShadowOffset" width="2" height="2"/>
@@ -324,6 +371,6 @@
         <image name="queen_of_hearts2" width="500" height="726"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="C58-wx-hEj"/>
+        <segue reference="PsS-U2-xL9"/>
     </inferredMetricsTieBreakers>
 </document>
