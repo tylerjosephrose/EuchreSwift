@@ -317,6 +317,82 @@
             </objects>
             <point key="canvasLocation" x="970.16491754122944" y="130.40000000000001"/>
         </scene>
+        <!--Bid View Controller-->
+        <scene sceneID="BKG-8Y-QOt">
+            <objects>
+                <viewController storyboardIdentifier="sbbidView" id="UBm-O4-HDg" customClass="bidViewController" customModule="EuchreSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XyW-Eo-RpF"/>
+                        <viewControllerLayoutGuide type="bottom" id="EpO-mK-fmE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Q2-zl-37l">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cdg-gY-biW">
+                                <rect key="frame" x="214" y="123" width="239" height="149"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="SUU-gL-STa">
+                                        <rect key="frame" x="8" y="8" width="223" height="133"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="744-OL-EG5">
+                                                <rect key="frame" x="0.0" y="0.0" width="223" height="44.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4r-vP-FNr">
+                                                <rect key="frame" x="0.0" y="44.5" width="223" height="44"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="D8K-1r-R3z">
+                                                <rect key="frame" x="0.0" y="88.5" width="223" height="44.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z6i-o4-wiz">
+                                                        <rect key="frame" x="0.0" y="0.0" width="56" height="44.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ct4-Wj-N0A">
+                                                        <rect key="frame" x="56" y="0.0" width="55.5" height="44.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tt9-aR-aOJ">
+                                                        <rect key="frame" x="111.5" y="0.0" width="56" height="44.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K14-xC-OVE">
+                                                        <rect key="frame" x="167.5" y="0.0" width="55.5" height="44.5"/>
+                                                        <state key="normal" title="Button"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.4567364898911711" green="0.88525696992482361" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="SUU-gL-STa" firstAttribute="leading" secondItem="Cdg-gY-biW" secondAttribute="leadingMargin" id="UvX-rx-aUN"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="SUU-gL-STa" secondAttribute="trailing" id="ZQg-3b-beR"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="SUU-gL-STa" secondAttribute="bottom" id="fKH-Fu-0E1"/>
+                                    <constraint firstItem="SUU-gL-STa" firstAttribute="top" secondItem="Cdg-gY-biW" secondAttribute="topMargin" id="yUo-oQ-3Bm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cdg-gY-biW" secondAttribute="trailing" constant="194" id="PBG-kh-ZIP"/>
+                            <constraint firstItem="Cdg-gY-biW" firstAttribute="top" secondItem="XyW-Eo-RpF" secondAttribute="bottom" constant="103" id="h9J-iK-JdL"/>
+                            <constraint firstItem="Cdg-gY-biW" firstAttribute="leading" secondItem="2Q2-zl-37l" secondAttribute="leadingMargin" constant="194" id="nFn-10-Br0"/>
+                            <constraint firstItem="EpO-mK-fmE" firstAttribute="top" secondItem="Cdg-gY-biW" secondAttribute="bottom" constant="103" id="rvA-zk-7CX"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vdA-K7-Cbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1656" y="-258"/>
+        </scene>
         <!--Rules View Controller-->
         <scene sceneID="DTh-1V-Eje">
             <objects>

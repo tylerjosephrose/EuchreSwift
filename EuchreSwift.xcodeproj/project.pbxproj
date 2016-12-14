@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A6546BA1E00E41E004672BC /* bidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6546B91E00E41E004672BC /* bidViewController.swift */; };
 		9A6F622D1DFC409B0020F6D8 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F622C1DFC409B0020F6D8 /* Card.swift */; };
 		9A6F622F1DFC42F00020F6D8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F622E1DFC42F00020F6D8 /* Player.swift */; };
 		9A6F62311DFC44B00020F6D8 /* Trick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6F62301DFC44B00020F6D8 /* Trick.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A6546B91E00E41E004672BC /* bidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bidViewController.swift; sourceTree = "<group>"; };
 		9A6F622C1DFC409B0020F6D8 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		9A6F622E1DFC42F00020F6D8 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		9A6F62301DFC44B00020F6D8 /* Trick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trick.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				9A6F623C1DFDD8CC0020F6D8 /* GameViewController.swift */,
 				9A6F623E1DFDD8DA0020F6D8 /* SettingsViewController.swift */,
 				9A6F62421DFDD9290020F6D8 /* RulesViewController.swift */,
+				9A6546B91E00E41E004672BC /* bidViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				9ADA01231DFBC9100052B70D /* Deck.swift in Sources */,
 				9A6F62371DFC87DA0020F6D8 /* Round.swift in Sources */,
 				9A6F62851DFE00050020F6D8 /* CardButton.swift in Sources */,
+				9A6546BA1E00E41E004672BC /* bidViewController.swift in Sources */,
 				9A6F62311DFC44B00020F6D8 /* Trick.swift in Sources */,
 				9A6F623D1DFDD8CC0020F6D8 /* GameViewController.swift in Sources */,
 				9ADA010D1DFBBF260052B70D /* ViewController.swift in Sources */,
